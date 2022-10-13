@@ -6,7 +6,7 @@ import ModalContact from './Modal';
 const heroDetails = {
     text: 'I am Reach,',
     br: 'Software Developer',
-    note: 'A Big Fan Of Algorithm In Turing Machine',
+    note: 'A Big Fan Of Algorithm In Turing Machine based in Phnom Penh',
     button: 'Contact Me',
     icon: <CallIcon/>
 }

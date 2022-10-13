@@ -1,12 +1,11 @@
 import React from 'react'
-import { Button, Avatar, Modal, TextField, Typography, List, ListItem, ListItemAvatar, ListItemText, ButtonGroup } from '@mui/material'
-import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import VideoCameraBackIcon from '@mui/icons-material/VideoCameraBack';
-import { blue, green, yellow } from '@mui/material/colors';
-import { Box, Stack } from '@mui/system';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
+import { Modal, Typography, List, ListItem, ListItemText } from '@mui/material'
+import { Box } from '@mui/system';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
+import GitHub from '@mui/icons-material/GitHub';
+import Instagram from '@mui/icons-material/Instagram';
 
 const style = {
     position: 'absolute',
@@ -21,6 +20,51 @@ const style = {
     height: 400,
 }
 
+const padding = {
+    padding: '0 10px',
+}
+
+const blueIcon = {
+    color: '#5cb3fa'
+}
+
+
+
+const cotactList = [
+    {
+        id: 1,
+        icon: <LinkedInIcon sx={blueIcon}/>,
+        link: "https://web.facebook.com/phat.panhareach/",
+        account: 'Phat Panhareach',
+    },
+    {
+        id: 2,
+        icon: <FacebookIcon sx={blueIcon} />,
+        link: "https://web.facebook.com/phat.panhareach/",
+        account: 'Reach',
+    },
+    {
+        id: 3,
+        icon: <LocalPostOfficeIcon sx={{color: 'red'}}/>,
+        link: "https://gmail.com",
+        account: 'panhareach.phat@student.cadt.edu.kh',
+    },
+    {
+        id: 4,
+        icon: <GitHub sx={{color: "secondary"}} />,
+        link: "https://github.com/Re4ch-Jay",
+        account: 'Re4ch-Jay',
+    },
+    {
+        id: 3,
+        icon: <Instagram sx={{color: 'red'}}/>,
+        link: "https://www.instagram.com/re4ch_/",
+        account: 'Re4ch_',
+    },
+]
+
+
+
 function ModalContact({open, setOpen}) {
   return (
     <Modal
@@ -30,42 +74,26 @@ function ModalContact({open, setOpen}) {
     aria-describedby="modal-modal-description"
     >
         <Box sx={style} bgcolor={'background.default'} color={'text.primary'}>
-            <Typography textAlign="center">
-                Create Post
+            <Typography variant='h5' textAlign="center">
+                Contact Me
             </Typography>
             <List>
-                <ListItem>
-                    <ListItemAvatar>
-                        <Avatar sx={{ bgcolor: blue[500] }} src="user4.jpg" />
-                    </ListItemAvatar>  
-                    <ListItemText primary="Phat Panhareach"/>
-                </ListItem>
-            </List>
-            <TextField
-                    id="standard-multiline-static"
-                    label="What is on your mind?"
-                    variant="standard"
-                    fullWidth 
-                    multiline
-                    rows={3}
-                    />
-            <Stack direction="row" spacing={3} sx={{marginTop: 1}}>
-                <AddPhotoAlternateIcon sx={{color: 'red'}} />
-                <EmojiEmotionsIcon sx={{color: yellow[600]}}/>
-                <VideoCameraBackIcon sx={{color: green[600]}} />
-            </Stack>
-            <Stack direction="row" spacing={2} sx={{marginTop: 1}}>
-                <ButtonGroup fullWidth>
-                    <Button variant="outlined" startIcon={<DeleteIcon />}>
-                        Cancel
-                    </Button>
-                    <Button variant="contained" endIcon={<SendIcon />}>
-                        Post
-                    </Button>
-                </ButtonGroup>
+                {cotactList.map(item => (
+                    <ListItem key={item.id}>
+                        {item.icon}
+                        <a href={item.link} target="_blank">
+                            <ListItemText primary={item.account}sx={padding}/>
+                        </a>
+                    </ListItem>
+                ))}
+               
                 
-            </Stack>
-        </Box>
+            </List>
+            
+            <Typography textAlign="center" padding="5px 0">
+                Contact me, whenever you can!
+            </Typography>   
+       </Box>
     </Modal>
   )
 }

@@ -1,6 +1,6 @@
 import { Box, createTheme, ThemeProvider } from '@mui/material';
 import Navbar from "./Components/Navbar"
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Home from './Components/Home';
 import Blogs from './Components/Blogs/Blogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'

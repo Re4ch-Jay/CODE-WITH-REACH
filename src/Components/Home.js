@@ -1,6 +1,5 @@
 import React from 'react'
 import About from './About/About'
-import Footer from './Footer/Footer'
 import Hero from './Hero'
 import Language from './Language Icons/Language'
 import Skills from './Skills/Skills'

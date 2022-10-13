@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Grid, Stack } from '@mui/material'
+import { Avatar, Container, Grid, Stack } from '@mui/material'
 import React from 'react'
 
 function Language() {
@@ -13,7 +13,7 @@ function Language() {
                     alignItems="center"
                     >
                     {languages.map(language => (
-                        <div className="language">
+                        <div className="language" key={language.image}>
                             <Grid item xs={2} sm={4} md={4} >
                                 <Avatar src={language.image} sx={{ width: 70, height: 70 }}/>
                             </Grid>

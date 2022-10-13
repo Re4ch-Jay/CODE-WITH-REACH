@@ -20,7 +20,23 @@ const white = {
   color: 'white'
 }
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [
+  {
+    text: 'Home',
+    link: '/',
+    id: 1,
+  },
+  {
+    text: 'Blogs',
+    link: '/blogs',
+    id: 2
+  },
+  {
+    text: 'Projects',
+    link: '/projects',
+    id: 3
+  },
+]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const Navbar = ({setMode, mode}) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -86,23 +102,12 @@ const Navbar = ({setMode, mode}) => {
               }}
             >
                 {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <Link className='link' to={page.link}>
+                    <Typography textAlign="center">{page.text}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
-              
-                {/* <MenuItem onClick={handleCloseNavMenu}>
-                 <Typography sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <Link className='link' to="/">Home</Link>
-                </Typography>
-                <Typography sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <Link className='link' to="/blogs">Blogs</Link>
-                </Typography>
-                <Typography sx={{ my: 2, color: 'white', display: 'block' }}>
-                  <Link className='link' to="/projects">Projects</Link>
-                </Typography>
-                </MenuItem> */}
-          
             </Menu>
           </Box>
           <Typography

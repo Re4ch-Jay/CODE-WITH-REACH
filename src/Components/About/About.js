@@ -61,13 +61,15 @@ function About() {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus est autem cupiditate illo repudiandae necessitatibus quis molestias perferendis dolores dolore?
                         </p>
                     </div>
-                    <Button
-                        variant='contained' 
-                        endIcon={<EmailIcon/>}
-                        sx={{color: 'white', margin: "20px 0"}}
-                        >
-                        Download CV
-                    </Button>
+                    <a href="reach3.jpg" download>
+                        <Button
+                            variant='contained' 
+                            endIcon={<EmailIcon/>}
+                            sx={{color: 'white', margin: "20px 0"}}
+                            >
+                            Download CV
+                        </Button>
+                    </a>
                     </div>
 
                 </div>
