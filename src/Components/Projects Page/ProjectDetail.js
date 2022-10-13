@@ -21,7 +21,7 @@ function ProjectDetail() {
                   <Typography gutterBottom variant="h5" component="div">
                     Description
                   </Typography>
-                  <Typography variant="body2" color="text.secondary" className='text-light'>
+                  <Typography variant="body" >
                    <strong>ReactJS</strong> <br />
                   Well, it is not just a single project that react.JS has helped me with. React.js is my daily driver, being a front-end developer, 
                   I use it every day to code. Currently, I am working on a CRM and React.js is being used to develop the front-end.

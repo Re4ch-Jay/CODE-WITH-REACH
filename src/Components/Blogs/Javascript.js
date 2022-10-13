@@ -6,7 +6,7 @@ function Javascript() {
         <div className = 'text-center text-warning py-5'>
             <h1>JavaScript</h1>
         </div>
-        <div className="text-center text-light pb-5 mb-5">
+        <div className="text-center pb-5 mb-5">
     
         <h5>"Front-End Champ!"</h5>
         
