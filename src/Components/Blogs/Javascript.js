@@ -2,7 +2,7 @@ import React from 'react'
 
 function Javascript() {
   return (
-    <section className="container-md fs-5">
+    <section className="container-md">
         <div className = 'text-center text-warning py-5'>
             <h1>JavaScript</h1>
         </div>
