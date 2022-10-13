@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardContent, CardMedia, Container, Grid, Stack, Typography } from '@mui/material'
+import { Card, CardActionArea, CardContent, CardMedia, Container, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Language from '../Language Icons/Language';
@@ -27,7 +27,7 @@ function Blogs() {
         justifyContent="space-around">
         {blogList.map(item => (
           
-            <Card sx={{ maxWidth: 345 }} key={item.id} component="li">
+            <Card sx={{ maxWidth: 345 }} key={item.id} component="li" className='card-animate'>
               <CardActionArea>
                 <Link to={item.link}>
                   <CardMedia

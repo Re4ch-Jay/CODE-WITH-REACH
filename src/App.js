@@ -10,6 +10,8 @@ import ProjectDetail from './Components/Projects Page/ProjectDetail';
 import Reactjs from './Components/Blogs/Reactjs';
 import Nodejs from './Components/Blogs/Nodejs';
 import Javascript from './Components/Blogs/Javascript';
+
+
 function App() {
   const [mode, setMode] = useState('dark')
   const darkTheme = createTheme({

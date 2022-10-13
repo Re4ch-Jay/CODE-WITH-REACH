@@ -1,24 +1,43 @@
 import React, {useState} from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import CodeIcon from '@mui/icons-material/Code';
 import { Switch } from '@mui/material';
 import { Link } from 'react-router-dom'
 import BedtimeIcon from '@mui/icons-material/Bedtime';
 import LightModeIcon from '@mui/icons-material/LightMode';
-
+import Drawer from '@mui/material/Drawer';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import { useTheme } from '@emotion/react';
+import styled from '@emotion/styled';
 
 const white = {
   color: 'white'
 }
+
+
+const drawerWidth = 240;
+
+const DrawerHeader = styled('div')(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: 'flex-end',
+}));
 
 const pages = [
   {
@@ -39,20 +58,21 @@ const pages = [
 ]
 
 const Navbar = ({setMode, mode}) => {
-  const [anchorElNav, setAnchorElNav] = useState(null);
+    const theme = useTheme();
+    const [open, setOpen] = useState(false);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+  const handleDrawerOpen = () => {
+    setOpen(true);
   };
 
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleDrawerClose = () => {
+    setOpen(false);
   };
 
 
   return (
-    <AppBar position="sticky" sx={{bgcolor: 'light'}}>
+    <Box>
+    <AppBar position='sticky' sx={{bgcolor: 'light'}} component='nav'>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'white' }} />
@@ -78,43 +98,17 @@ const Navbar = ({setMode, mode}) => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={handleDrawerOpen}
               
             >
               <MenuIcon sx={white} />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-                {pages.map((page) => (
-                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                    <Link className='text-warning link' to={page.link}>
-                      <Typography textAlign="center">{page.text}</Typography>
-                    </Link>
-                </MenuItem>
-                  
-              ))}
-            </Menu>
+            
           </Box>
           <Typography
             variant="h5"
             noWrap
-            component="a"
+            component="p"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -147,6 +141,40 @@ const Navbar = ({setMode, mode}) => {
         </Toolbar>
       </Container>
     </AppBar>
+      <Drawer
+          sx={{
+            width: drawerWidth,
+            flexShrink: 0,
+            '& .MuiDrawer-paper': {
+              width: drawerWidth,
+              boxSizing: 'border-box',
+            },
+          }}
+          variant="persistent"
+          anchor="left"
+          open={open}
+        >
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
+          <List>
+            {pages.map(item => (
+              <ListItem key={item.id} disablePadding components="div">
+                <Link to={item.link}>
+                  <ListItemButton components='div'>
+                    <ListItemText primary={item.text} />
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+            ))}
+          </List>
+      </Drawer>
+        
+    </Box>
   );
 };
 export default Navbar;
+

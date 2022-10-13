@@ -25,8 +25,7 @@ function ProjectHero() {
                 <div className="col-md-6 d-none d-md-block">
                     <Avatar src="reach.jpg" alt="" sx={{ width: "400px", height: "400px" }} />
                 </div>
-            </div>
-            
+            </div>            
         </div>
     </section>
   )

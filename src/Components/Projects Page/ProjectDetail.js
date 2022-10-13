@@ -17,7 +17,6 @@ function ProjectDetail() {
         <Container>
           <div className="project-card">
             <Card fullWidth elevation={0}>
-
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     Description
