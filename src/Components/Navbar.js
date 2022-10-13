@@ -37,7 +37,7 @@ const pages = [
     id: 3
   },
 ]
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 const Navbar = ({setMode, mode}) => {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
@@ -103,10 +103,11 @@ const Navbar = ({setMode, mode}) => {
             >
                 {pages.map((page) => (
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Link className='link' to={page.link}>
-                    <Typography textAlign="center">{page.text}</Typography>
-                  </Link>
+                    <Link className='text-warning link' to={page.link}>
+                      <Typography textAlign="center">{page.text}</Typography>
+                    </Link>
                 </MenuItem>
+                  
               ))}
             </Menu>
           </Box>

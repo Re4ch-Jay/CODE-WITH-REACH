@@ -15,14 +15,12 @@ code {
 .link {
   text-decoration: none;
   color: white;
-  transform: scaleY(-15px);
 }
 
 
 .link:hover{
   text-decoration: underline;
   color: white;
-  transition: 1s ease-in-out;
 }
 
 .footer{
@@ -51,4 +49,10 @@ a{
 
 .language:hover{
   transform: translateY(-15px);
+}
+
+li{
+  text-decoration: none;
+  border: 1.5px solid #edca18;
+  list-style: none;
 }

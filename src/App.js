@@ -7,7 +7,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Projects from './Components/Projects Page/Projects';
 import Footer from './Components/Footer/Footer';
 import ProjectDetail from './Components/Projects Page/ProjectDetail';
-
+import Reactjs from './Components/Blogs/Reactjs';
+import Nodejs from './Components/Blogs/Nodejs';
+import Javascript from './Components/Blogs/Javascript';
 function App() {
   const [mode, setMode] = useState('dark')
   const darkTheme = createTheme({
@@ -25,9 +27,14 @@ function App() {
           <Navbar mode={mode} setMode={setMode}/>
             <Routes>
               <Route path='/' element={<Home/>} />
-              <Route path='/blogs' element={<Blogs/>} />
               <Route path='/projects' element={<Projects/>} />
-              <Route path="/projects/:id/*" element={<ProjectDetail />}/> 
+              <Route path="/projects/:id" element={<ProjectDetail />}/> 
+
+              <Route path='/blogs' element={<Blogs/>} />
+              <Route path="blogs/reactjs" element={<Reactjs />}/> 
+              <Route path="blogs/javascript" element={<Javascript />}/> 
+              <Route path="blogs/nodejs" element={<Nodejs />}/> 
+           
             </Routes>
           <Footer/>
         </Box>

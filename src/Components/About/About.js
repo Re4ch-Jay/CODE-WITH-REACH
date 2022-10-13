@@ -7,7 +7,8 @@ import Typography from '@mui/material/Typography';
 import CodeIcon from '@mui/icons-material/Code';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import EmailIcon from '@mui/icons-material/Email';
-
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import HomeIcon from '@mui/icons-material/Home';
 const cardItem = [
     {
         title: <SchoolIcon/>,
@@ -43,7 +44,7 @@ function About() {
                     <div className="col-md-5 text-center text-md-start">
                     <Stack direction="row" spacing={2} justifyContent='space-between'>
                         {cardItem.map(item => (
-                        <Card key={item.subheader} sx={{ width: 200, textAlign: 'center', height: 150, maxWidth: 200}}>
+                        <Card component="li" key={item.subheader} sx={{ width: 200, textAlign: 'center', height: 150, maxWidth: 200}}>
                             <CardHeader
                                 title={item.title}
                                 subheader={item.subheader}    
@@ -56,10 +57,24 @@ function About() {
                         </Card>
                         ))}
                     </Stack>
-                    <div className="text-center py-3">
+                    <div className="text-start py-3">
+                        <h5><SchoolIcon/> Education </h5>
                         <p className='text-muted'>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus est autem cupiditate illo repudiandae necessitatibus quis molestias perferendis dolores dolore?
+                            I am a student at Cambodia Academy of Digital Technology. My careers and journey started from here.
                         </p>
+                        <h5><CodeIcon/> Coding</h5>
+                        <p className='text-muted'>
+                            I am keen on coding and programming, I spent most of my hours in a day coding and programming and it became my hobby.
+                        </p>
+                        <h5><WorkOutlineIcon/> Job</h5>
+                        <p className='text-muted'>
+                            I am currently volunteering at CADT Coding Club. One of the student club at Cambodia Academy of Digital Technology.
+                        </p>
+                        <h5><HomeIcon/> Living</h5>
+                        <p className='text-muted'>
+                            I am currently a student, fullstack software developer based in Phnom Penh, Cambodia.
+                        </p>
+                        
                     </div>
                     <a href="reach3.jpg" download>
                         <Button

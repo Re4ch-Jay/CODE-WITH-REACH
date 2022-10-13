@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="text-white">
         <div className="f-icons">
           {iconLink.map(item => (
-            <a href={item.link} key={item.id}>
+            <a href={item.link} key={item.id} target='_blank'>
               {item.icon}
             </a>
           ))}

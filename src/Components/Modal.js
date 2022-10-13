@@ -7,6 +7,44 @@ import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import GitHub from '@mui/icons-material/GitHub';
 import Instagram from '@mui/icons-material/Instagram';
 
+
+function ModalContact({open, setOpen}) {
+  return (
+    <Modal
+    open={open}
+    onClose={() => setOpen(false)}
+    aria-labelledby="modal-modal-title"
+    aria-describedby="modal-modal-description"
+    >
+        <Box sx={style} bgcolor={'background.default'} color={'text.primary'}>
+            <Typography variant='h5' textAlign="center">
+                Contact Me
+            </Typography>
+            <List component="div">
+                {cotactList.map(item => (
+                    <ListItem key={item.id} component="div">
+                        {item.icon}
+                        <a href={item.link} target="_blank" className="text-warning">
+                            <ListItemText primary={item.account}sx={padding}/>
+                        </a>
+                    </ListItem>
+                ))}
+               
+                
+            </List>
+            
+            <Typography textAlign="center" padding="5px 0">
+                Contact me, whenever you can!
+            </Typography>   
+       </Box>
+    </Modal>
+  )
+}
+
+export default ModalContact
+
+
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -34,7 +72,7 @@ const cotactList = [
     {
         id: 1,
         icon: <LinkedInIcon sx={blueIcon}/>,
-        link: "https://web.facebook.com/phat.panhareach/",
+        link: "https://www.linkedin.com/in/panhareach-phat-0a5897249/",
         account: 'Phat Panhareach',
     },
     {
@@ -63,39 +101,3 @@ const cotactList = [
     },
 ]
 
-
-
-function ModalContact({open, setOpen}) {
-  return (
-    <Modal
-    open={open}
-    onClose={() => setOpen(false)}
-    aria-labelledby="modal-modal-title"
-    aria-describedby="modal-modal-description"
-    >
-        <Box sx={style} bgcolor={'background.default'} color={'text.primary'}>
-            <Typography variant='h5' textAlign="center">
-                Contact Me
-            </Typography>
-            <List>
-                {cotactList.map(item => (
-                    <ListItem key={item.id}>
-                        {item.icon}
-                        <a href={item.link} target="_blank">
-                            <ListItemText primary={item.account}sx={padding}/>
-                        </a>
-                    </ListItem>
-                ))}
-               
-                
-            </List>
-            
-            <Typography textAlign="center" padding="5px 0">
-                Contact me, whenever you can!
-            </Typography>   
-       </Box>
-    </Modal>
-  )
-}
-
-export default ModalContact

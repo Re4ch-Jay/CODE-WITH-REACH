@@ -1,9 +1,13 @@
 import React from 'react'
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Stack, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardMedia, Stack, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import ProjectHero from './ProjectHero';
 import Language from '../Language Icons/Language';
+import { Container } from '@mui/system';
 
+const yellow = {
+  color: '#edca18'
+}
 
 function Projects() {
   return (
@@ -13,16 +17,14 @@ function Projects() {
             <h1>All Projects</h1>
             <p className='text-muted'>Projects & Web I've Created</p>
         </div>
-       <div className="text-center img-list pb-5">
-        
+       <Container>
        <Stack  
           direction={{ xs: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row'}}
           spacing={{ xs: 1, sm: 2, md: 4 }}
           >
             {projectItems.map(item => (
                 <div className='m-2 project-card' key={item.id}>
-                  <Card  sx={{ maxWidth: "100%", margin: '20px 0'}}>
-                    <CardActionArea>
+                  <Card  sx={{ maxWidth: "100%", margin: '20px 0'}} component="li">
                       <CardMedia
                         component="img"
                         height="140"
@@ -30,22 +32,21 @@ function Projects() {
                         alt={item.image}
                       />
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h5" component="div"  sx={yellow}>
                           {item.title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          {item.content}
+                          ...{item.content.slice(-200)}...
                         </Typography>
                       </CardContent>
-                      <CardActions>
-                      <Link to={`/projects/${item.id}`}>
-                          <Button size="small">Read more</Button>
-                      </Link>
-                        <a href="https://github.com/Re4ch-Jay/React-Facebook-MUI" target="_blank">
-                          <Button size="small">github</Button>
-                        </a>
-                      </CardActions>
-                    </CardActionArea>
+                        <CardActions>
+                        <Link to={`/projects/${item.id}`}>
+                            <Button size="small">Read more</Button>
+                        </Link>
+                          <a href={item.link} target="_blank">
+                            <Button size="small">github</Button>
+                          </a>
+                        </CardActions>
                   </Card> 
                 </div>
               
@@ -57,31 +58,32 @@ function Projects() {
           >
             {projectItems2.map(item => (
                 <div className='m-2 project-card' key={item.id}>
-                  <Card  sx={{ maxWidth: "100%", margin: '20px 0'}}>
-                    <CardActionArea>
+                  <Card  sx={{ maxWidth: "100%", margin: '20px 0'}} component="li">
+                    
                       <CardMedia
                         component="img"
                         height="140"
                         image={item.image}
                         alt={item.image}
+      
                       />
                       <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={yellow}>
                           {item.title}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          {item.content}
+                          ...{item.content.slice(-100)}...
                         </Typography>
                       </CardContent>
                       <CardActions>
                       <Link to={`/projects/${item.id}`}>
                           <Button size="small">Read more</Button>
                       </Link>
-                        <a href="https://github.com/Re4ch-Jay/React-Facebook-MUI" target='_blank'>
+                        <a href={item.link} target='_blank'>
                           <Button size="small">github</Button>
                         </a>
                       </CardActions>
-                    </CardActionArea>
+             
                   </Card> 
                 </div>
               
@@ -92,7 +94,7 @@ function Projects() {
                 <p className='text-muted'>That included in those projects</p>
             </div>
         <Language/>
-       </div>
+       </Container>
     </section>
   )
 }
@@ -105,21 +107,24 @@ const projectItems = [
     image: 'project1.png',
     alt: 'project3',
     title: 'Sport Shop',
-    content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    link: 'https://github.com/Re4ch-Jay/',
+    content: 'Well, it is not just a single project that react.JS has helped me with. React.js is my daily driver, being a front-end developer, I use it every day to code. Currently, I am working on a CRM and React.js is being used to develop the front-end.'
   },
   {
     id: 2,
     image: 'project2.png',
     alt: 'project3',
     title: 'Medical School',
-    content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    link: 'https://github.com/Re4ch-Jay/medical_school',
+    content: 'Well, it is not just a single project that react.JS has helped me with. React.js is my daily driver, being a front-end developer, I use it every day to code. Currently, I am working on a CRM and React.js is being used to develop the front-end.'
   },
   {
     id: 3,
     image: 'project3.PNG',
     alt: 'project3',
     title: 'Facebook Clone',
-    content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    link: 'https://github.com/Re4ch-Jay/React-Facebook-MUI',
+    content: 'Well, it is not just a single project that react.JS has helped me with. React.js is my daily driver, being a front-end developer, I use it every day to code. Currently, I am working on a CRM and React.js is being used to develop the front-end.'
   },
 ]
 
@@ -129,20 +134,23 @@ const projectItems2 = [
     image: 'cafeRecipe.jpg',
     alt: 'cafe',
     title: 'Cafe Recipe',
-    content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    link: 'https://github.com/Re4ch-Jay/Node-JWT-with-CRUD',
+    content: 'As a computer science student, I use NodeJs Development Services for building my web apps, and I find it very easy to use NodeJs as a backend language. It is easy to integrate, and it provides you a lot of different modules that you can use to make your app awesome.'
   },
   {
     id: 2,
     image: 'Backend.png',
     alt: 'mongodb project',
     title: 'MongoDB',
-    content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    link: 'https://github.com/Re4ch-Jay/Native_MongoDB-with-NodeJS',
+    content: 'As a computer science student, I use NodeJs Development Services for building my web apps, and I find it very easy to use NodeJs as a backend language. It is easy to integrate, and it provides you a lot of different modules that you can use to make your app awesome.'
   },
   {
     id: 3,
     image: 'restAPI.png',
     alt: 'rest api',
     title: 'REST API',
-    content: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+    link: 'https://github.com/Re4ch-Jay/Backend-REST-API-',
+    content: 'As a computer science student, I use NodeJs Development Services for building my web apps, and I find it very easy to use NodeJs as a backend language. It is easy to integrate, and it provides you a lot of different modules that you can use to make your app awesome.'
   },
 ] 
