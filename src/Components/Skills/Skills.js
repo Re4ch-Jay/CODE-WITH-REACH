@@ -1,22 +1,6 @@
-import { Button, Card, CardActions, CardContent, Typography, Stack } from '@mui/material'
+import { Card, CardContent, Typography, Stack } from '@mui/material'
 import React from 'react'
 
-const skillItem = [
-    {
-        title: 'Frontend Development',
-        skills: 'JavaScript ReactJS HTML CSS Bootstrap Material UI NextJS'
-    },
-    
-    {
-        title: 'Backends Development',
-        skills: 'NodeJS ExpressJS MongoDB'
-    },
-    
-    {
-        title: 'Programming Language',
-        skills: 'JavaScript C/C++ Python R'
-    },
-]
 
 function Skills() {
   return (
@@ -51,3 +35,22 @@ function Skills() {
 }
 
 export default Skills
+
+
+
+const skillItem = [
+    {
+        title: 'Frontend Development',
+        skills: 'JavaScript ReactJS HTML CSS Bootstrap Material UI NextJS'
+    },
+    
+    {
+        title: 'Backends Development',
+        skills: 'NodeJS ExpressJS MongoDB'
+    },
+    
+    {
+        title: 'Programming Language',
+        skills: 'JavaScript C/C++ Python R'
+    },
+]
