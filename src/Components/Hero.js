@@ -5,7 +5,7 @@ import ModalContact from './Modal';
 
 const heroDetails = {
     text: 'I am Reach,',
-    br: 'Software Developer',
+    br: 'Fullstack Software Developer',
     note: 'A Big Fan Of Algorithm In Turing Machine based in Phnom Penh',
     button: 'Contact Me',
     icon: <CallIcon/>
@@ -19,8 +19,9 @@ function Hero() {
             <div className="row g4 justify-content-center align-items-center">
                 <div className="col-md-5 text-center text-md-start">
                     <h1>
-                        <div className="text-warning display-2 fw-bold">{heroDetails.text}<br/>{heroDetails.br} </div>
+                        <div className="text-warning display-2 fw-bold">{heroDetails.text}</div>
                     </h1>
+                    <h3 className="text-warning fs-1 fw-bold">{heroDetails.br}</h3>
                     <h4 className="text-muted py-3">{heroDetails.note}</h4>
                     <Button
                      variant='contained' 

@@ -34,7 +34,6 @@ function App() {
               <Route path="blogs/reactjs" element={<Reactjs />}/> 
               <Route path="blogs/javascript" element={<Javascript />}/> 
               <Route path="blogs/nodejs" element={<Nodejs />}/> 
-           
             </Routes>
           <Footer/>
         </Box>
