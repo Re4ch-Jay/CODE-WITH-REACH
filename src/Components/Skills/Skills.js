@@ -41,9 +41,6 @@ function Skills() {
                                  {item.skills}
                                  </Typography>
                              </CardContent>
-                             <CardActions>
-                                 <Button size="small">Read More</Button>
-                             </CardActions>
                          </Card>
                         ))}
                     </div>
