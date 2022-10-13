@@ -76,7 +76,7 @@ function About() {
                         </p>
                         
                     </div>
-                    <a href="reach3.jpg" download>
+                    <a href="PhatPanhareach-CV.pdf" download>
                         <Button
                             variant='contained' 
                             endIcon={<EmailIcon/>}
