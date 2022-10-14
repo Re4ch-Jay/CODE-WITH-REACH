@@ -7,27 +7,7 @@ import Typography from '@mui/material/Typography';
 import CodeIcon from '@mui/icons-material/Code';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import EmailIcon from '@mui/icons-material/Email';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import HomeIcon from '@mui/icons-material/Home';
-
-
-const cardItem = [
-    {
-        title: <SchoolIcon/>,
-        subheader: 'CADT',
-        content: 'Year 2'
-    },
-    {
-        title: <SportsEsportsIcon/>,
-        subheader: 'Gaming',
-        content: 'I love game'
-    },
-    {
-        title: <CodeIcon/>,
-        subheader: 'Coding',
-        content: 'Free time'
-    }
-]
+import Detail from './Detail';
 
 function About() {
   return (
@@ -59,26 +39,9 @@ function About() {
                         </Card>
                         ))}
                     </Stack>
-                    <div className="text-start py-3">
-                        <h5><SchoolIcon/> Education </h5>
-                        <p className='text-muted'>
-                            I am a student at Cambodia Academy of Digital Technology. My careers and journey started from here.
-                        </p>
-                        <h5><CodeIcon/> Coding</h5>
-                        <p className='text-muted'>
-                            I am keen on coding and programming, I spent most of my hours in a day coding and programming and it became my hobby.
-                        </p>
-                        <h5><WorkOutlineIcon/> Job</h5>
-                        <p className='text-muted'>
-                            I am currently volunteering at CADT Coding Club. One of the student club at Cambodia Academy of Digital Technology.
-                        </p>
-                        <h5><HomeIcon/> Living</h5>
-                        <p className='text-muted'>
-                            I am currently a student, fullstack software developer based in Phnom Penh, Cambodia.
-                        </p>
-                        
-                    </div>
-                    <a href="PhatPanhareachCV.pdf" download>
+                    <Detail/>
+                    <a 
+                    href="PhatPanhareachCV.pdf" download>
                         <Button
                             variant='contained' 
                             endIcon={<EmailIcon/>}
@@ -87,6 +50,7 @@ function About() {
                             Download CV
                         </Button>
                     </a>
+                    
                     </div>
 
                 </div>
@@ -98,3 +62,21 @@ function About() {
 }
 
 export default About
+
+const cardItem = [
+    {
+        title: <SchoolIcon/>,
+        subheader: 'CADT',
+        content: 'Year 2'
+    },
+    {
+        title: <SportsEsportsIcon/>,
+        subheader: 'Gaming',
+        content: 'I love game'
+    },
+    {
+        title: <CodeIcon/>,
+        subheader: 'Coding',
+        content: 'Free time'
+    }
+]

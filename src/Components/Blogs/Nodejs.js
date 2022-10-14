@@ -1,8 +1,12 @@
 import React from 'react'
-
+import { motion } from 'framer-motion/dist/framer-motion'
 function Nodejs() {
   return (
-    <section className="container-md">
+    <motion.section className="container-md"
+      variants={animateVariants}
+      initial="initial"
+      animate="animate"
+    >
         <div className = 'text-center text-warning py-5'>
             <h1>NodeJS</h1>
         </div>
@@ -25,8 +29,24 @@ function Nodejs() {
         Creating a simple but advanced service in the backend for my software is an ideal choice as it provides us with different modules, which helps in the easy integration of a lot of other functions.
         </div>
         
-    </section>
+    </motion.section>
   )
 }
 
 export default Nodejs
+
+
+//animation
+const animateVariants = {
+  initial: {
+    x: '-100vw'
+  },
+  animate: {
+    type: 'tween',
+    x: 0,
+    transition: {
+      duration: 0.5,
+      stifness: 50
+    }
+  },
+} 

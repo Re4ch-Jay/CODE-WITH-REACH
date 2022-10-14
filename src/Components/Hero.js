@@ -45,9 +45,13 @@ function Hero() {
                     <ModalContact open={open} setOpen={setOpen}/>
                 </div>
 
-                <div className="col-md-6 d-none d-md-block">
+                <motion.div 
+                initial={{x: '100vw'}}
+                animate={{x: 0}}
+                transition={{delay: 0.5, duration: 0.5}}
+                className="col-md-6 d-none d-md-block">
                     <Avatar src="reach3.jpg" alt="" sx={{ width: "400px", height: "400px" }} />
-                </div>
+                </motion.div>
             </div>
             
         </div>

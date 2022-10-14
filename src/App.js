@@ -1,6 +1,6 @@
 import { Box, createTheme, ThemeProvider } from '@mui/material';
-import Navbar from "./Components/Navbar"
-import React, { useState } from 'react';
+import Navbar from './Components/Navbar/Navbar';
+import React, { createContext, useState } from 'react';
 import Home from './Components/Home';
 import Blogs from './Components/Blogs/Blogs';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -10,7 +10,9 @@ import ProjectDetail from './Components/Projects Page/ProjectDetail';
 import Reactjs from './Components/Blogs/Reactjs';
 import Nodejs from './Components/Blogs/Nodejs';
 import Javascript from './Components/Blogs/Javascript';
+import Notfound from './Components/Notfound';
 
+export const setThemeContext = createContext();
 
 function App() {
   const [mode, setMode] = useState('dark')
@@ -23,7 +25,8 @@ function App() {
     }
   })
   return (
-    <ThemeProvider  theme={darkTheme}>
+    <setThemeContext.Provider value={{mode, setMode}}>
+    <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
         <Box bgcolor={'background.default'} color={'text.primary'}>
           <Navbar mode={mode} setMode={setMode}/>
@@ -36,11 +39,13 @@ function App() {
               <Route path="blogs/reactjs" element={<Reactjs />}/> 
               <Route path="blogs/javascript" element={<Javascript />}/> 
               <Route path="blogs/nodejs" element={<Nodejs />}/> 
+              <Route path="*" element={<Notfound/>}/>
             </Routes>
           <Footer/>
         </Box>
       </BrowserRouter>
     </ThemeProvider>
+    </setThemeContext.Provider>
   );
 }
 

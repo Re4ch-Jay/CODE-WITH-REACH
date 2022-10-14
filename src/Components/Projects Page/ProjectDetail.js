@@ -1,15 +1,18 @@
 import React from 'react'
-import { useParams } from "react-router-dom"
 import { Container } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-
+import { motion } from 'framer-motion/dist/framer-motion'
 
 function ProjectDetail() {
-    const {id} = useParams()
+   
   return (
-    <section className='container-xxl'>
+    <motion.section className='container-xxl'
+      variants={animateVariants}
+      initial="initial"
+      animate="animate"
+    >
         <div className="text-center  py-5 text-warning">
             <h1>Project Detail</h1>
             <p className='text-muted'>About my project</p>
@@ -38,8 +41,24 @@ function ProjectDetail() {
         </div>
         <div className='py-5'></div>
         </Container>
-    </section>
+    </motion.section>
   )
 }
 
 export default ProjectDetail
+
+
+//animation
+const animateVariants = {
+  initial: {
+    x: '-100vw'
+  },
+  animate: {
+    type: 'tween',
+    x: 0,
+    transition: {
+      duration: 0.5,
+      stifness: 50
+    }
+  },
+} 

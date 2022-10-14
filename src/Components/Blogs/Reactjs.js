@@ -1,8 +1,13 @@
 import React from 'react'
+import { motion } from 'framer-motion/dist/framer-motion'
 
 function Reactjs() {
   return (
-    <section className="container-md">
+    <motion.section className="container-md"
+      variants={animateVariants}
+      initial="initial"
+      animate="animate"
+    >
         <div className = 'text-center text-warning py-5'>
             <h1>Reactjs</h1>
         </div>
@@ -27,9 +32,24 @@ function Reactjs() {
         It is helping me with developing the front-end of web applications. The benefits that I have realized are that there is no page reloading, the website feels a lot faster and we can re-use the code with copy-pasting!
         </div>
         
-    </section>
+    </motion.section>
   )
 }
 
 export default Reactjs
 
+
+//animation
+const animateVariants = {
+  initial: {
+    x: '-100vw'
+  },
+  animate: {
+    type: 'tween',
+    x: 0,
+    transition: {
+      duration: 0.5,
+      stifness: 50
+    }
+  },
+} 

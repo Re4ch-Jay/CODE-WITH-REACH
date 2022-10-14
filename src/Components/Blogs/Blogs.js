@@ -3,25 +3,53 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Language from '../Language Icons/Language';
 import { motion} from 'framer-motion/dist/framer-motion'
-const padding = {
-  padding: "10px 0"
+
+const animateVariant = {
+  hidden: {
+    y: -200
+  },
+  visible: {
+    y: 0,
+    transition: {
+      duration: 0.5,
+    }
+  } 
 }
 
-const yellow = {
-  color: "#edca18"
-}
+
+//animation
+const animateCards = {
+  initial: {
+    x: '-100vw'
+  },
+  animate: {
+    type: 'tween',
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay: 0.5,
+      stifness: 50
+    }
+  },
+} 
 
 function Blogs() {
   return (
     <section className='container-fluid'>
         <motion.div className="text-center text-warning py-5"
-        initial={{y: -200}}
-        animate={{y: 0}}
+        variants={animateVariant}
+        initial="hidden"
+        animate="visible"
         >
             <h1>All Blogs</h1>
             <p className='text-muted'>Explore my blogs here, about my road map to learn those technologies</p>
         </motion.div>
       <Container>
+        <motion.div
+          variants={animateCards}
+          initial="initial"
+          animate="animate"
+        >
         <Stack 
         sx={padding}
         direction={{ xs: 'column', sm: 'row', md: 'row', lg: 'row', xl: 'row'}}
@@ -52,7 +80,7 @@ function Blogs() {
             </Card>
         ))}
         </Stack>
-       
+        </motion.div>
         <div className='py-5 my-5'>
           <Language/>
         </div>
@@ -65,6 +93,13 @@ function Blogs() {
 export default Blogs
 
 
+const padding = {
+  padding: "10px 0"
+}
+
+const yellow = {
+  color: "#edca18"
+}
 
 const blogList = [
   {
