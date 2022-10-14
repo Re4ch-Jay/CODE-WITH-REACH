@@ -22,6 +22,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import {motion} from 'framer-motion/dist/framer-motion'
 
 const white = {
   color: 'white'
@@ -75,23 +76,34 @@ const Navbar = ({setMode, mode}) => {
     <AppBar position='sticky' sx={{bgcolor: 'light'}} component='nav'>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'white' }} />
-          <Typography
-            variant="h6"
-            noWrap
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'white',
-              textDecoration: 'none',
-            }}
+          <motion.div
+          initial={{y: -200}}
+          animate={{y: 0}}
+          
+          ><CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: 'white' }} /></motion.div>
+        <motion.div
+          initial={{y: -200}}
+          animate={{y: 0}}
           >
-            Code with Reach
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'white',
+                textDecoration: 'none',
+              }}
+              
+            >
+              
+              Code with Reach
           </Typography>
-
+          </motion.div>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -105,6 +117,7 @@ const Navbar = ({setMode, mode}) => {
             </IconButton>
             
           </Box>
+          
           <Typography
             variant="h5"
             noWrap
@@ -120,8 +133,15 @@ const Navbar = ({setMode, mode}) => {
               fontSize: 18,  
             }}
           >
+            <motion.div 
+            initial={{y: -200}}
+            animate={{y: 0}}
+            transition={{duration: 0.5}}
+            >
             Code with Reach
+            </motion.div>
           </Typography>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} >
             <Button>
               <Link className='link' to="/">Home</Link>

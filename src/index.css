@@ -71,9 +71,9 @@ nav {
   border-radius: 0px 0 500px 0;
   position: fixed;
 }
-.card-animate{
-  transition: 1s ease;
-}
+
 .card-animate:hover {
-  transform: rotate(-5deg);
+  transition: 0.2s ease-in;
+  transform: rotate(-2deg);
+
 }

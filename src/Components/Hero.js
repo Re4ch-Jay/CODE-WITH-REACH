@@ -2,6 +2,7 @@ import { Avatar, Button } from '@mui/material'
 import React, { useState } from 'react'
 import CallIcon from '@mui/icons-material/Call';
 import ModalContact from './Modal';
+import { motion} from 'framer-motion/dist/framer-motion'
 
 const heroDetails = {
     text: 'I am Reach,',
@@ -18,11 +19,21 @@ function Hero() {
         <div className="container-xxl">
             <div className="row g4 justify-content-center align-items-center">
                 <div className="col-md-5 text-center text-md-start">
-                    <h1>
+                    <motion.h1  initial={{x: '-100vw'}}
+                                animate={{x: 0}}
+                                transition={{delay: 0.5}}>
                         <div className="text-warning display-2 fw-bold">{heroDetails.text}</div>
-                    </h1>
-                    <h3 className="text-warning fs-1 fw-bold">{heroDetails.br}</h3>
-                    <h4 className="text-muted py-3">{heroDetails.note}</h4>
+                    </motion.h1>
+                    <motion.h3 
+                    initial={{x: '100vw'}}
+                    animate={{x: 0}}
+                    transition={{delay: 1}}
+                    className="text-warning fs-1 fw-bold">{heroDetails.br}</motion.h3>
+                    <motion.h4 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{delay: 1.5, duration: 0.3 }}
+                    className="text-muted py-3">{heroDetails.note}</motion.h4>
                     <Button
                      variant='contained' 
                      endIcon={heroDetails.icon}

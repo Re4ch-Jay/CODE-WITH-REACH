@@ -2,7 +2,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Container, Stack, Typogra
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Language from '../Language Icons/Language';
-
+import { motion} from 'framer-motion/dist/framer-motion'
 const padding = {
   padding: "10px 0"
 }
@@ -14,10 +14,13 @@ const yellow = {
 function Blogs() {
   return (
     <section className='container-fluid'>
-        <div className="text-center text-warning py-5">
+        <motion.div className="text-center text-warning py-5"
+        initial={{y: -200}}
+        animate={{y: 0}}
+        >
             <h1>All Blogs</h1>
             <p className='text-muted'>Explore my blogs here, about my road map to learn those technologies</p>
-        </div>
+        </motion.div>
       <Container>
         <Stack 
         sx={padding}
