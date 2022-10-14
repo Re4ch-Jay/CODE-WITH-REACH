@@ -41,12 +41,12 @@ export default Skills
 const skillItem = [
     {
         title: 'Frontend Development',
-        skills: 'JavaScript ReactJS HTML CSS Bootstrap Material UI NextJS Flutter React Native'
+        skills: 'JavaScript ReactJS HTML CSS Bootstrap Material UI NextJS Flutter React Native Gatsby'
     },
     
     {
         title: 'Backends Development',
-        skills: 'NodeJS ExpressJS MongoDB by building Rest API Security Hashing'
+        skills: 'NodeJS ExpressJS MongoDB by building Rest API Security, Authentication and Hashing'
     },
     
     {
