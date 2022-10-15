@@ -1,0 +1,12 @@
+
+.boxPlay {
+    font-family: sans-serif;
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    margin-top: 80px;
+    perspective: 1000px;
+}
+  

@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion/dist/framer-motion'
+import BoxPlay from '../Spring/BoxPlay';
 
 function ProjectDetail() {
    
@@ -39,7 +40,7 @@ function ProjectDetail() {
                 </CardContent>
             </Card>
         </div>
-        <div className='py-5'></div>
+        <BoxPlay/>
         </Container>
     </motion.section>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion/dist/framer-motion'
+import BoxPlay from '../Spring/BoxPlay';
 function Nodejs() {
   return (
     <motion.section className="container-md"
@@ -28,7 +29,7 @@ function Nodejs() {
         <strong>What problems is the provider solving and how is that benefiting you?</strong><br />
         Creating a simple but advanced service in the backend for my software is an ideal choice as it provides us with different modules, which helps in the easy integration of a lot of other functions.
         </div>
-        
+        <BoxPlay/>
     </motion.section>
   )
 }

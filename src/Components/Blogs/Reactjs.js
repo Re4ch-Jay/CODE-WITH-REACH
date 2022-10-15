@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion/dist/framer-motion'
-
+import BoxPlay from '../Spring/BoxPlay';
 function Reactjs() {
   return (
     <motion.section className="container-md"
@@ -31,7 +31,8 @@ function Reactjs() {
         <strong>What problems is the provider solving and how is that benefiting you?</strong><br />
         It is helping me with developing the front-end of web applications. The benefits that I have realized are that there is no page reloading, the website feels a lot faster and we can re-use the code with copy-pasting!
         </div>
-        
+       
+        <BoxPlay/>
     </motion.section>
   )
 }
