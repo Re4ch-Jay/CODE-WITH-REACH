@@ -2,7 +2,7 @@ import React from 'react'
 import ProjectHero from './ProjectHero';
 import Language from '../Language Icons/Language';
 import { Container } from '@mui/system';
-import { projectItems, projectItems2 } from './Items';
+import { projectItems, projectItems2, projectItems3 } from './Items';
 import FrontendProject from './FrontendProject';
 import BackendProject from './BackendProject';
 import { Stack } from '@mui/material';
@@ -34,6 +34,15 @@ function Projects() {
         <Stack direction={direction} spacing={spacing}
           >
             {projectItems2.map(item => (
+                <div className='m-2 project-card' key={item.id}>
+                  <BackendProject item={item} yellow={yellow}/>
+                </div>
+            ))}
+        </Stack>
+
+        <Stack direction={direction} spacing={spacing}
+          >
+            {projectItems3.map(item => (
                 <div className='m-2 project-card' key={item.id}>
                   <BackendProject item={item} yellow={yellow}/>
                 </div>

@@ -16,7 +16,8 @@ function Detail() {
         </p>
         <h5><WorkOutlineIcon/> Job</h5>
         <p className='text-muted'>
-            I am currently volunteering at CADT Coding Club. One of the student club at Cambodia Academy of Digital Technology.
+            I am currently volunteering at CADT Coding Club. One of the student club at Cambodia Academy of Digital Technology. <br />
+            I also a freelancer for my <a href="https://getmeqr.vercel.app/" target="_blank"> Get Me QR </a> project that I built to help people to create QR code for free.
         </p>
         <h5><HomeIcon/> Living</h5>
         <p className='text-muted'>

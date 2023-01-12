@@ -24,7 +24,7 @@ function FrontendProject({item, yellow}) {
             <Button size="small">Read more</Button>
         </Link>
             <a href={item.link} target="_blank">
-            <Button size="small">github</Button>
+            <Button size="small">{item.view}</Button>
             </a>
         </CardActions>
     </Card> 
