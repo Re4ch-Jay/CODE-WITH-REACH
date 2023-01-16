@@ -46,11 +46,11 @@ const skillItem = [
     
     {
         title: 'Backends Development',
-        skills: 'NodeJS, ExpressJS, MongoDB, Firebase, by building Rest API Security, Authentication and Hashing'
+        skills: 'NodeJS, ExpressJS, MongoDB, Firebase, Laravel by building Rest API Security, Authentication and Hashing'
     },
     
     {
-        title: 'Programming Language that I Understand',
-        skills: 'JavaScript, C/C++, Python'
+        title: 'Programming Language that I worked with',
+        skills: 'JavaScript, C/C++, Python, Java, PHP'
     },
 ]

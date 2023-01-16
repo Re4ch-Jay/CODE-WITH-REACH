@@ -17,15 +17,15 @@ function BackendProject({item, yellow}) {
             {item.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-            ...{item.content.slice(-200)}...
+           {item.content}
         </Typography>
         </CardContent>
         <CardActions>
-        <Link to={`/projects/${item.id}`}>
+        {/* <Link to={`/projects/${item.id}`}>
             <Button size="small">Read more</Button>
-        </Link>
+        </Link> */}
             <a href={item.link} target="_blank">
-            <Button size="small">github</Button>
+            <Button size="small">{item.view}</Button>
             </a>
         </CardActions>
     </Card> 
