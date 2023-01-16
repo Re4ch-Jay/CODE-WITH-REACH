@@ -24,7 +24,7 @@ export const projectItems = [
       image: 'project3.PNG',
       alt: 'project3',
       title: 'Facebook Clone',
-      link: 'facebookbyreach.vercel.app/',
+      link: 'https://facebookbyreach.vercel.app/',
       content: 'This project built with ReactJS, React Router and Rapid API, I try to clone messeger as familar as possible.'
     },
   ]
