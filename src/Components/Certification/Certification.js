@@ -31,7 +31,7 @@ function Certification() {
 
         <div className='mb-5 d-flex flex-column flex-lg-row justify-content-between align-items-center'>
             <div className='flex-1 text-center text-lg-start'>
-                <h2>Certification from Linkedin & Microsoft</h2>
+                <h2>Certification from Simplilearn</h2>
                 <p className='fs-5 text-warning'>Top Skills covered</p>
                 <p>Programming <br /> Machine Learning Introduction <br /> Data Science Introduction <br /> Math</p> 
             </div>
