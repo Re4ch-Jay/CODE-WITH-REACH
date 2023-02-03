@@ -68,6 +68,11 @@ const pages = [
     link: '/projects',
     id: 3
   },
+  {
+    text: 'Certifications',
+    link: '/certifications',
+    id: 4
+  },
 ]
 
 const StyleDrawer = {

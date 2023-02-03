@@ -11,6 +11,7 @@ import Reactjs from './Components/Blogs/Reactjs';
 import Nodejs from './Components/Blogs/Nodejs';
 import Javascript from './Components/Blogs/Javascript';
 import Notfound from './Components/Notfound';
+import Certification from './Components/Certification/Certification';
 
 export const setThemeContext = createContext();
 
@@ -34,6 +35,7 @@ function App() {
               <Route path='/' element={<Home/>} />
               <Route path='/projects' element={<Projects/>} />
               <Route path="/projects/:id" element={<ProjectDetail />}/> 
+              <Route path="/certifications" element={<Certification />}/> 
 
               <Route path='/blogs' element={<Blogs/>} />
               <Route path="blogs/reactjs" element={<Reactjs />}/> 

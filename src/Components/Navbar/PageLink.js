@@ -14,6 +14,9 @@ function PageLink() {
         <Button>
             <Link className='link' to="/projects">Projects</Link>
         </Button>
+        <Button>
+            <Link className='link' to="/certifications">Certifications</Link>
+        </Button>
     </Box>
   )
 }
