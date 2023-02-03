@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemButton, ListItemText } from '@mui/material'
+import { Button, List, ListItem, ListItemText } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -6,13 +6,13 @@ function PageLinkDrawer({pages}) {
   return (
     <List>
         {pages.map(item => (
-        <ListItem key={item.id} disablePadding components="div">
-            <Link to={item.link}>
-            <ListItemButton components='div'>
-                <ListItemText primary={item.text} />
-            </ListItemButton>
+        <List key={item.id} disablePadding components="div">
+            <Link to={item.link} className="link">
+            <Button components='div'>
+                <ListItemText primary={item.text} components="div"/>
+            </Button>
             </Link>
-        </ListItem>
+        </List>
         ))}
     </List>
   )
