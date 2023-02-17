@@ -1,6 +1,5 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 
 function BackendProject({item, yellow}) {
@@ -21,9 +20,7 @@ function BackendProject({item, yellow}) {
         </Typography>
         </CardContent>
         <CardActions>
-        {/* <Link to={`/projects/${item.id}`}>
-            <Button size="small">Read more</Button>
-        </Link> */}
+    
             <a href={item.link} target="_blank">
             <Button size="small">{item.view}</Button>
             </a>
