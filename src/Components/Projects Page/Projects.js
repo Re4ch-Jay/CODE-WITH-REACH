@@ -18,7 +18,26 @@ function Projects() {
         </div>
        <Container>
 
-      
+       <div className="text-center text-warning py-5">
+                <h4>Mobile Development Projects</h4>
+        </div>
+        <Stack direction={direction} spacing={spacing}
+          >
+            {mobileProject1.map(item => (
+                <div className='m-2 project-card' key={item.id}>
+                  <MobileProject item={item} yellow={yellow}/>
+                </div>
+            ))}
+        </Stack>
+
+        <Stack direction={direction} spacing={spacing}
+          >
+            {mobileProject2.map(item => (
+                <div className='m-2 project-card' key={item.id}>
+                  <MobileProject item={item} yellow={yellow}/>
+                </div>
+            ))}
+        </Stack>
 
        <div className="text-center text-warning py-5">
                 <h4>Frontend Projects</h4>
@@ -74,28 +93,6 @@ function Projects() {
                 </div>
             ))}
         </Stack>
-
-        <div className="text-center text-warning py-5">
-                <h4>Mobile Development Projects</h4>
-        </div>
-        <Stack direction={direction} spacing={spacing}
-          >
-            {mobileProject1.map(item => (
-                <div className='m-2 project-card' key={item.id}>
-                  <MobileProject item={item} yellow={yellow}/>
-                </div>
-            ))}
-        </Stack>
-
-        <Stack direction={direction} spacing={spacing}
-          >
-            {mobileProject2.map(item => (
-                <div className='m-2 project-card' key={item.id}>
-                  <MobileProject item={item} yellow={yellow}/>
-                </div>
-            ))}
-        </Stack>
-
         <div className="text-center text-warning py-5">
                 <h4>Language & Framework</h4>
                 <p className='text-muted'>That included in those projects</p>
