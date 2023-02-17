@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 
-function FrontendProject({item, yellow}) {
+function MobileProject({item, yellow}) {
   return (
     <Card sx={{ maxWidth: "100%", margin: '20px 0'}} component="li">
         <CardMedia
@@ -29,4 +29,4 @@ function FrontendProject({item, yellow}) {
   )
 }
 
-export default FrontendProject
+export default MobileProject

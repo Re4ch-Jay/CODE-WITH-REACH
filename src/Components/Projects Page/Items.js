@@ -113,3 +113,47 @@ export const projectItems2 = [
       content: 'MUI offers a comprehensive suite of UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library, or bring your own design system to our production-ready components.'
     }
   ] 
+
+
+  
+  export const mobileProject1 = [
+    {
+      id: 1,
+      view: "YouTube",
+      image: 'mobile/1.png',
+      alt: 'BMR Calculator',
+      title: 'BMR Calculator',
+      link: 'https://www.youtube.com/watch?v=IQDrMxVY2fI&ab_channel=Reach',
+      content: 'Flutter & Dart is my favorite mobile development kit for job done. It all in Dart and I do not need to worry about other technology beside dart.'
+    },
+    {
+      id: 2,
+      view: "YouTube",
+      image: 'mobile/2.png',
+      alt: 'BMI Calculator',
+      title: 'BMI Calculator',
+      link: 'https://www.youtube.com/watch?v=3LJJENa9aec&ab_channel=Reach',
+      content: 'Flutter & Dart is easy to integrate, and it provides you a lot of different modules that you can use to make my app awesome. It all in Dart and I do not need to worry about other technology beside dart.'
+    }
+  ] 
+
+  export const mobileProject2 = [
+    {
+      id: 1,
+      view: "YouTube",
+      image: 'mobile/3.png',
+      alt: 'Rock Paper Scissors Game',
+      title: 'Rock Paper Scissors Game',
+      link: 'https://www.youtube.com/watch?v=NGN1_PxsVi8&ab_channel=Reach',
+      content: 'Flutter & Dart is easy to integrate, and it provides you a lot of different modules that you can use to make my app awesome.'
+    },
+    {
+      id: 2,
+      view: "Youtube",
+      image: 'project/2.jpg',
+      alt: 'project3',
+      title: 'Messenger UI Clone',
+      link: 'https://www.youtube.com/watch?v=zq-DXs9iOxE&t=64s&ab_channel=Reach',
+      content: "This project built with React Native and React Navigation, I try to clone messeger as familar as possible"
+    },
+  ] 
