@@ -149,7 +149,7 @@ export const projectItems2 = [
     },
     {
       id: 2,
-      view: "Youtube",
+      view: "YOUTUBE",
       image: 'project/2.jpg',
       alt: 'project3',
       title: 'Messenger UI Clone',
