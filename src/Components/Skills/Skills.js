@@ -40,8 +40,12 @@ export default Skills
 
 const skillItem = [
     {
+        title: 'Mobile Development',
+        skills: 'Flutter & Dart, React Native'
+    },
+    {
         title: 'Frontend Development',
-        skills: 'JavaScript, ReactJS, HTML, CSS, Bootstrap, Material UI, NextJS, React Native, TailwindCSS'
+        skills: 'JavaScript, ReactJS, HTML, CSS, Bootstrap, Material UI, NextJS, TailwindCSS'
     },
     
     {

@@ -110,7 +110,7 @@ export const projectItems2 = [
       alt: 'Notes App',
       title: 'Notes App',
       link: 'https://github.com/Re4ch-Jay/React-Material-UI',
-      content: 'MUI offers a comprehensive suite of UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library, or bring your own design system to our production-ready components.'
+      content: 'MUI a comprehensive suite of UI tools to help you ship new features faster. Start with Material UI, our fully-loaded component library design system to our production-ready components.'
     }
   ] 
 
@@ -133,7 +133,7 @@ export const projectItems2 = [
       alt: 'BMI Calculator',
       title: 'BMI Calculator',
       link: 'https://www.youtube.com/watch?v=3LJJENa9aec&ab_channel=Reach',
-      content: 'Flutter & Dart is easy to integrate, and it provides you a lot of different modules that you can use to make my app awesome. It all in Dart and I do not need to worry about other technology beside dart.'
+      content: 'Flutter & Dart is easy to integrate, and it provides you a lot of different modules that you can use to make my app awesome. It all in Dart and I do not need to worry about other technology.'
     }
   ] 
 
